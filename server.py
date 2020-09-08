@@ -2,12 +2,6 @@ import asyncio
 import websockets
 
 print("PROJECTINT V0.0.1")
-async def hello(websocket, path):
-    name = await websocket.recv()
-    print(f"< {name}")
-    greeting = f"hello {name}"
-    await websocket.send(greeting)
-    print(f"> {greeting}")
 
 async def init(websocket, path):
     await parser_handler(websocket, path)
